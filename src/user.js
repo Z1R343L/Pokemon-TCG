@@ -283,11 +283,11 @@ class userHandler
             {
                 fix = "0"
             }
-            this.embed.setImage(`${this.extensions[this.extension].cardsBaseImage}${fix}${this.cards[this.card].id}.png`)
+            this.embed.setImage(`${this.extensions[this.extension].cardsBaseImage}${fix}${this.cards[this.card].id}._hires.png`)
         }
         else
         {
-            this.embed.setImage(`${this.extensions[this.extension].cardsBaseImage}${this.cards[this.card].id}.png`)
+            this.embed.setImage(`${this.extensions[this.extension].cardsBaseImage}${this.cards[this.card].id}._hires.png`)
         }
         if (this.isBuyable)
         {

@@ -5,6 +5,7 @@ const deleteMessage = require('./deleteMessage.js')
 class userHandler
 {
     embed = new Discord.MessageEmbed()
+        .setColor('#CCCCCC');
     serie = 0
     series = []
     extensions = []
@@ -243,7 +244,7 @@ class userHandler
         {
             this.hasOneCard = false
             description = this.noCardsInThisExpansion
-            this.embed.setImage("")
+            this.embed.set("")
         }
         else
         {

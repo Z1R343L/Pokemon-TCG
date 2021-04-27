@@ -244,7 +244,7 @@ class userHandler
         {
             this.hasOneCard = false
             description = this.noCardsInThisExpansion
-            this.embed.set("")
+            this.embed.setDescription(description)
         }
         else
         {

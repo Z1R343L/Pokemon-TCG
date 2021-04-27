@@ -66,7 +66,7 @@ class userHandler
                 this.baseDescription = `You Have`
                 this.baseAuthorExt = "Choose the expansion you want"
                 this.baseAuthorSerie = "Choose the serie you want"
-                this.sell = "You sold the cards that you already had, you earned"
+                this.sell = "Sold dupes for"
                 this.listExt = "List of the extisting expansions for this serie"
                 this.new = "New card!"
                 this.serieNumber = "Number in the serie"

@@ -247,7 +247,7 @@ class userHandler
         }
         else
         {
-            this.embed.setImage(this.extensions[this.extension].image)
+            this.embed.setThumbnail(this.extensions[this.extension].image)
         }
         this.embed.setAuthor(this.baseAuthorExt)
         this.embed.setTitle(this.extensions[this.extension].name)

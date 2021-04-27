@@ -463,9 +463,9 @@ class userHandler
                     {
                         msg.react('❌').then(() =>
                         {
-                            const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === this.authorId
-                            const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === this.authorId
-                            const validateFilter = (reaction, user) => reaction.emoji.name === '✔️' && user.id === this.authorId
+                            const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅️' && user.id === this.authorId
+                            const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡️' && user.id === this.authorId
+                            const validateFilter = (reaction, user) => reaction.emoji.name === '✅' && user.id === this.authorId
                             const cancelFilter = (reaction, user) => reaction.emoji.name === '❌' && user.id === this.authorId
             
                             const backwards = msg.createReactionCollector(backwardsFilter)

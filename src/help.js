@@ -86,12 +86,12 @@ class helpHandler
         {
             this.channel.send(this.embed).then(msg =>
             {
-                msg.react('⬅').then(r =>
+                msg.react('⬅️').then(r =>
                 {
-                    msg.react('➡').then(() =>
+                    msg.react('➡️').then(() =>
                     {
-                        const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === this.authorId
-                        const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === this.authorId
+                        const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅️' && user.id === this.authorId
+                        const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡️' && user.id === this.authorId
 
                         const backwards = msg.createReactionCollector(backwardsFilter)
                         const forwards = msg.createReactionCollector(forwardsFilter)

@@ -455,11 +455,11 @@ class userHandler
         this.drawSerie()
         this.channel.send(this.embed).then(msg =>
         {
-            msg.react('⬅').then(r =>
+            msg.react('⬅️').then(r =>
             {
-                msg.react('➡').then(r =>
+                msg.react('➡️').then(r =>
                 {
-                    msg.react('✔️').then(r =>
+                    msg.react('✅').then(r =>
                     {
                         msg.react('❌').then(() =>
                         {

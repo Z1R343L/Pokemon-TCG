@@ -250,6 +250,7 @@ class userHandler
         {
             this.embed.setThumbnail(this.extensions[this.extension].image)
         }
+        this.embed.setImage(' ')
         this.embed.setTitle(this.extensions[this.extension].name)
         this.embed.setDescription(description)
         this.embed.setFooter(`${this.extension + 1}/${this.extensions.length}`)

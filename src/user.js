@@ -198,7 +198,7 @@ class userHandler
         var json = JSON.stringify(data)
         fs.writeFileSync('data/user.json', json)
     }
-    
+
     drawSerie()
     {
         var description = ""
@@ -251,7 +251,9 @@ class userHandler
             this.embed.setThumbnail(this.extensions[this.extension].image)
         }
         this.embed.setImage(' ')
-        this.embed.setTitle(this.extensions[this.extension].name)
+        var authorurl = 'https://images.pokemontcg.io/' + this.extensions[this.extension].image + '/symbol.png'
+        this.embed.setAuthor(this.extensions[this.extension].name, authorurl)
+        this.embed.setTitle('')
         this.embed.setDescription(description)
         this.embed.setFooter(`${this.extension + 1}/${this.extensions.length}`)
     }
@@ -269,7 +271,7 @@ class userHandler
             description += `${this.new}\n\n`
         }
         else if (!this.isBuyable)
-        {    
+        {
             description += `${this.serieNumber}: ${this.cards[this.card].id}/${this.extensions[this.extension].size}`
         }
         this.embed.setThumbnail(' ')
@@ -372,7 +374,7 @@ class userHandler
         // 6th
         card = Math.floor(Math.random() * this.extensions[this.extension].uncommon.length)
         this.cards.push({"id": this.extensions[this.extension].uncommon[card], "rarity": "uncommon"})
-        
+
         // 7th
         card = Math.floor(Math.random() * this.extensions[this.extension].uncommon.length)
         while (this.extensions[this.extension].uncommon[card] == this.cards[5].id)
@@ -398,7 +400,7 @@ class userHandler
         else if (reverse > 0.95)
         {
             this.cards.push({"id": this.extensions[this.extension].special[Math.floor(Math.random() * this.extensions[this.extension].special.length)], "rarity": "special"})
-        
+
         }
         else if (reverse > 0.65)
         {
@@ -418,7 +420,7 @@ class userHandler
                 card = Math.floor(Math.random() * this.extensions[this.extension].common.length)
             this.cards.push({"id": this.extensions[this.extension].common[card], "rarity": "common"})
         }
-        
+
         // 10th
         var rare = Math.random()
         if (rare > 0.999 && this.extensions[this.extension].canGetSecret)
@@ -469,12 +471,12 @@ class userHandler
                             const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡️' && user.id === this.authorId
                             const validateFilter = (reaction, user) => reaction.emoji.name === '✅' && user.id === this.authorId
                             const cancelFilter = (reaction, user) => reaction.emoji.name === '❌' && user.id === this.authorId
-            
+
                             const backwards = msg.createReactionCollector(backwardsFilter)
                             const forwards = msg.createReactionCollector(forwardsFilter)
                             const validate = msg.createReactionCollector(validateFilter)
                             const cancel = msg.createReactionCollector(cancelFilter)
-                            
+
                             backwards.on('collect', (r, _) =>
                             {
                                 if (!this.hasValidated && this.serie != 0)
@@ -610,7 +612,7 @@ class userHandler
         this.createMessage(userMsg)
     }
 
-    money(language) 
+    money(language)
     {
         var date = this.get("date")
         if (date == null)

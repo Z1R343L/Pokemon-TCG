@@ -448,7 +448,6 @@ class userHandler
                 card = Math.floor(Math.random() * this.extensions[this.extension].rare.length)
             this.cards.push({"id": this.extensions[this.extension].rare[card], "rarity": "rare"})
         }
-        this.embed.setAuthor("")
         this.embed.setDescription("")
         this.addCards()
         this.drawCard()

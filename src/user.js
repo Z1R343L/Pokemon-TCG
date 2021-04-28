@@ -251,7 +251,7 @@ class userHandler
             this.embed.setThumbnail(this.extensions[this.extension].image)
         }
         this.embed.setImage(' ')
-        var authorurl = 'https://images.pokemontcg.io/' + this.extensions[this.extension].image + '/symbol.png'
+        var authorurl = 'https://images.pokemontcg.io/' + this.extensions[this.extension].id + '/symbol.png'
         this.embed.setAuthor(this.extensions[this.extension].name, authorurl)
         this.embed.setTitle('')
         this.embed.setDescription(description)

@@ -203,7 +203,6 @@ class userHandler
     {
         var description = ""
         this.extensions = JSON.parse(fs.readFileSync(`cards/${this.dir}/${this.series[this.serie].id}.json`))
-        console.log(authorurl)
         this.embed.setAuthor(this.series[this.serie].name)
         this.hasOneCard = false
         if (this.isBuyable)

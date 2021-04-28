@@ -203,10 +203,12 @@ class userHandler
     {
         var description = ""
         this.extensions = JSON.parse(fs.readFileSync(`cards/${this.dir}/${this.series[this.serie].id}.json`))
+        var authorurl = 'https://images.pokemontcg.io/' + this.series[this.serie].id + '/symbol.png'
+        console.log(authorurl)
         this.embed.setAuthor(
             {
                 name: this.series[this.serie].name,
-                icon_url: 'https://images.pokemontcg.io/' + this.series[this.serie].id + '/symbol.png'
+                icon_url: authorurl
             }
         )
         this.hasOneCard = false

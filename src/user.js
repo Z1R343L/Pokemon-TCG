@@ -328,7 +328,6 @@ class userHandler
                 this.embed.setFooter(`${this.baseDescription} ${base}/${this.extensions[this.extension].size}`)
             }
         }
-        this.embed.setAuthor("")
     }
 
     open()

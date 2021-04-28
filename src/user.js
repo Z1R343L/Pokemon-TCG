@@ -248,9 +248,8 @@ class userHandler
         }
         else
         {
-            this.embed.setThumbnail(this.extensions[this.extension].image)
+            this.embed.setImage(this.extensions[this.extension].image)
         }
-        this.embed.setImage(' ')
         var authorurl = 'https://images.pokemontcg.io/' + this.extensions[this.extension].id + '/symbol.png'
         this.embed.setAuthor(this.extensions[this.extension].name, authorurl)
         this.embed.setTitle('')
@@ -274,7 +273,6 @@ class userHandler
         {
             description += `${this.serieNumber}: ${this.cards[this.card].id}/${this.extensions[this.extension].size}`
         }
-        this.embed.setThumbnail(' ')
         this.embed.setDescription(description)
         if (this.extensions[this.extension].fixNumber)
         {

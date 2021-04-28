@@ -203,14 +203,8 @@ class userHandler
     {
         var description = ""
         this.extensions = JSON.parse(fs.readFileSync(`cards/${this.dir}/${this.series[this.serie].id}.json`))
-        var authorurl = 'https://images.pokemontcg.io/' + this.series[this.serie].id + '/symbol.png'
         console.log(authorurl)
-        this.embed.setAuthor(
-            {
-                name: this.series[this.serie].name,
-                icon_url: authorurl
-            }
-        )
+        this.embed.setAuthor(this.series[this.serie].name)
         this.hasOneCard = false
         if (this.isBuyable)
         {
@@ -257,7 +251,14 @@ class userHandler
         {
             this.embed.setImage(this.extensions[this.extension].image)
         }
-        this.embed.setAuthor(this.baseAuthorExt)
+        var authorurl = 'https://images.pokemontcg.io/' + this.extensions[this.extension].id + '/symbol.png'
+        console.log(authorurl)
+        this.embed.setAuthor(
+            {
+                name: this.series[this.serie].name,
+                icon_url: authorurl
+            }
+        )
         this.embed.setTitle(this.extensions[this.extension].name)
         this.embed.setDescription(description)
         this.embed.setFooter(`${this.extension + 1}/${this.extensions.length}`)

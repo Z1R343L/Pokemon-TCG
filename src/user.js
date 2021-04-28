@@ -182,7 +182,7 @@ class userHandler
                         if (!found)
                         {
                             data.users[i][this.extensions[this.extension].id].push(this.cards[j].id)
-                            this.cardsNew.push(true)
+                            this.cardsNew.push(trfue)
                         }
                         else
                         {
@@ -203,7 +203,12 @@ class userHandler
     {
         var description = ""
         this.extensions = JSON.parse(fs.readFileSync(`cards/${this.dir}/${this.series[this.serie].id}.json`))
-        this.embed.setTitle(this.series[this.serie].name)
+        this.embed.setAuthor(
+            {
+                name: this.series[this.serie].name,
+                icon_url: 'https://images.pokemontcg.io/' + this.series[this.serie].id + '/symbol.png'
+            }
+        )
         this.hasOneCard = false
         if (this.isBuyable)
         {

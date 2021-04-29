@@ -12,7 +12,11 @@
         "id": "XY"
     },
     {
-        "name": "Black & White",
+        "name": "Black and White",
         "id": "BW"
+    },
+    {
+        "name": "Base Series",
+        "id": "BASE"
     }
 ]

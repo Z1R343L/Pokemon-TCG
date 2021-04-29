@@ -1,14 +1,18 @@
 [
     {
-        "name": "Sword and Shield",
+        "name": "Sword & Shield",
         "id": "SWSH"
     },
     {
-        "name": "Sun and Moon",
+        "name": "Sun & Moon",
         "id": "SM"
     },
     {
-        "name": "X and Y",
+        "name": "X & Y",
         "id": "XY"
+    },
+    {
+        "name": "Black & White",
+        "id": "BW"
     }
 ]

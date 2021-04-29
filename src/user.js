@@ -182,7 +182,7 @@ class userHandler
                         if (!found)
                         {
                             data.users[i][this.extensions[this.extension].id].push(this.cards[j].id)
-                            this.cardsNew.push(trfue)
+                            this.cardsNew.push(true)
                         }
                         else
                         {

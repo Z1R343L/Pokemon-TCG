@@ -85,7 +85,7 @@ client.on('message', msg =>
     // Check if message starts with prefix
     if (contentWithPrefix.startsWith("ty "))
     {
-        content = contentWithPrefix.substr(4).toLocaleLowerCase()
+        content = contentWithPrefix.substr(3).toLocaleLowerCase()
     }
     else if (contentWithPrefix.startsWith(`${guildPrefix}`))
     {

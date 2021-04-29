@@ -251,10 +251,10 @@ class userHandler
             this.embed.setImage(this.extensions[this.extension].image)
         }
         var authorurl = 'https://images.pokemontcg.io/' + this.extensions[this.extension].id + '/symbol.png'
-        this.embed.setAuthor('')
+        this.embed.setAuthor(this.extensions[this.extension].name, authorurl)
         this.embed.setTitle('')
         this.embed.setDescription(description)
-        this.embed.setFooter(`${this.extension + 1}/${this.extensions.length}`, authorurl)
+        this.embed.setFooter(`${this.extension + 1}/${this.extensions.length}`)
     }
 
     drawCard()

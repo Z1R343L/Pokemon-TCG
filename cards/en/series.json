@@ -1,4 +1,3 @@
-
 [
     {
         "name": "Sword and Shield",
@@ -9,7 +8,7 @@
         "id": "SM"
     },
     {
-	"name": "X and Y",
-	"id": "XY"
+        "name": "X and Y",
+        "id": "XY"
     }
 ]

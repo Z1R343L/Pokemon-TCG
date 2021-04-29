@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 class helpHandler
 {
     embed = new Discord.MessageEmbed()
+        .setColor('CCCCCC');
     channel
     authorId
     isAdmin
@@ -37,8 +38,8 @@ class helpHandler
                 break
             case "english":
             default:
-                this.commandList = "Command list"
-                this.adminCommandList = "Administrator command list"
+                this.commandList = "commands:"
+                this.adminCommandList = "admin commands:"
                 this.viewCommandDescription = "View your card's collection"
                 this.buyCommandDescription = "Buy new boosters"
                 this.moneyCommandDescription = "Receive 10$ (every hour)"
@@ -56,8 +57,6 @@ class helpHandler
         this.embed.setColor("#f7432f")
         this.embed.fields = []
         this.embed.addFields(
-            { name: "tcg language", value: this.languageCommandDescription, inline: true},
-            { name: "tcg language list", value: this.languageListCommandDescription, inline: true},
             { name: "tcg prefix", value: this.prefixCommandDescription},
             { name: "tcg delete_message", value: this.deleteMessageCommandDescription, inline: true},
         )
@@ -66,7 +65,7 @@ class helpHandler
     drawBasicHelp()
     {
         this.embed.setTitle(this.commandList)
-        this.embed.setColor("#3679f5")
+        this.embed.setColor("#CCCCCC")
         this.embed.fields = []
         this.embed.addFields(
             { name: "tcg v || view", value: this.viewCommandDescription, inline: true},

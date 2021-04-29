@@ -58,7 +58,7 @@ catch
 client.on('ready', () => 
 {
     console.log(`app.js: Logged in as ${client.user.username}!`)
-    client.user.setActivity('tcg help', {type: 'PLAYING'})
+    client.user.setActivity('ty help', {type: 'PLAYING'})
 })
 
 client.on('message', msg => 
@@ -83,7 +83,7 @@ client.on('message', msg =>
     const guildPrefix = prefix.get(id, channelType)
 
     // Check if message starts with prefix
-    if (contentWithPrefix.startsWith("tcg "))
+    if (contentWithPrefix.startsWith("ty "))
     {
         content = contentWithPrefix.substr(4).toLocaleLowerCase()
     }

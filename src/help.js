@@ -57,8 +57,8 @@ class helpHandler
         this.embed.setColor("#f7432f")
         this.embed.fields = []
         this.embed.addFields(
-            { name: "tcg prefix", value: this.prefixCommandDescription},
-            { name: "tcg delete_message", value: this.deleteMessageCommandDescription, inline: true},
+            { name: "ty prefix", value: this.prefixCommandDescription},
+            { name: "ty delete_message", value: this.deleteMessageCommandDescription, inline: true},
         )
     }
 
@@ -68,9 +68,9 @@ class helpHandler
         this.embed.setColor("#CCCCCC")
         this.embed.fields = []
         this.embed.addFields(
-            { name: "tcg v || view", value: this.viewCommandDescription, inline: true},
-            { name: "tcg b || buy", value: this.buyCommandDescription, inline: true},
-            { name: "tcg m || money", value: this.moneyCommandDescription},
+            { name: "ty v || view", value: this.viewCommandDescription, inline: true},
+            { name: "ty b || buy", value: this.buyCommandDescription, inline: true},
+            { name: "ty m || money", value: this.moneyCommandDescription},
         )
     }
 

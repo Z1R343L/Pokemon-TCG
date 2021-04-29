@@ -65,17 +65,17 @@ class userHandler
                 this.dir = "en"
                 this.price = "Price"
                 this.baseDescription = `You Have`
-                this.baseAuthorExt = "Choose the expansion you want"
-                this.baseAuthorSerie = "Choose the serie you want"
-                this.sell = "Sold dupes for"
-                this.listExt = "List of the extisting expansions for this serie"
-                this.new = "New card!"
-                this.serieNumber = "Number in the serie"
-                this.notEnoughMoney = "You don't have enough money to buy this booster"
-                this.noCardsInThisSerie = "You don't have any card in this serie"
-                this.noCardsInThisExpansion = "You don't have any carte in this expansion"
-                this.secretCard = "secret card"
-                this.secretCards = "secret cards"
+                this.baseAuthorExt = "Choose Set"
+                this.baseAuthorSerie = "Choose Series"
+                this.sell = "Sold dupes"
+                this.listExt = "Sets:"
+                this.new = "New!"
+                this.serieNumber = "Set nr:"
+                this.notEnoughMoney = "You don't have enough money to buy this"
+                this.noCardsInThisSerie = "You didn't pull any Card from this Series yet!"
+                this.noCardsInThisExpansion = "You didn't pull any Card from this Series yet!"
+                this.secretCard = "Secret!"
+                this.secretCards = "secret cards:"
                 break
         }
         this.series = JSON.parse(fs.readFileSync(`cards/${this.dir}/series.json`))
@@ -203,7 +203,7 @@ class userHandler
     {
         var description = ""
         this.extensions = JSON.parse(fs.readFileSync(`cards/${this.dir}/${this.series[this.serie].id}.json`))
-        this.embed.setAuthor(this.series[this.serie].name)
+        this.embed.setTitle(this.series[this.serie].name)
         this.hasOneCard = false
         if (this.isBuyable)
         {

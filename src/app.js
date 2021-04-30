@@ -1,12 +1,12 @@
-import {} from "dotenv/config";
-import fs from "fs";
-import Discord from "discord.js";
-import Statcord from "statcord.js";
-import prefix from "./prefix.js";
-import language from "./language.js";
-import user from "./user.js";
-import help from "./help.js";
-import deleteMessage from "./deleteMessage.js";
+require('dotenv').config()
+const fs = require('fs')
+const Discord = require("discord.js")
+const Statcord = require("statcord.js")
+const prefix = require("./prefix.js")
+const language = require("./language.js")
+const user = require("./user.js")
+const help = require("./help.js")
+const deleteMessage = require("./deleteMessage.js")
 
 const client = new Discord.Client();
 const statcord = new Statcord.Client({

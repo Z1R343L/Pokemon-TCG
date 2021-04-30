@@ -111,7 +111,7 @@ statcord.on("autopost-start", () => {
 });
 
 statcord.on("post", status => {
-    if (!status) console.log("Successful post")
+    if (!status) console.log("Successful post");
     else console.error(status)
 })
 

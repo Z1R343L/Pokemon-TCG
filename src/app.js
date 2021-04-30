@@ -30,7 +30,7 @@ client.on('message', msg => {
     const channel = msg.channel
      
     // Check if the bot is in a guild or in private message
-    if (msg.guild) {let channelType = 'guild'; let id = msg.guild.id} else {let channelType = 'user'; let id = msg.author.id}
+    if (msg.guild) {let channelType = 'guild'; id = msg.guild.id} else {channelType = 'user'; id = msg.author.id}
 
     const guildLanguage = language.get(id, channelType)
     const guildPrefix = prefix.get(id, channelType)

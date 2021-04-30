@@ -1,13 +1,15 @@
+require('dotenv').config()
 const Discord = require('discord.js')
 const fs = require('fs')
-const client = new Discord.Client();
 const prefix = require('./prefix.js')
 const language = require('./language.js');
 const user = require('./user.js')
 const help = require('./help.js')
 const deleteMessage = require('./deleteMessage.js')
 
-token = fs.readFileSync('token.txt', 'utf8').replace('\n', '')
+const client = new Discord.Client();
+
+token = process.env.BOT_TOKEN
 
 // Create data folder if it doesn't exist
 if (!fs.existsSync('data/'))

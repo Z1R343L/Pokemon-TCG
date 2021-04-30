@@ -44,6 +44,8 @@ client.on('message', msg => {
     }
     else {return}
 
+    statcord.postCommand(content, msg.author.id);
+
     // Language handling
     if (content == "language list" && msg.member.hasPermission("ADMINISTRATOR")) {
         language.list(channel)
@@ -102,6 +104,14 @@ client.on('message', msg => {
         handler.view()
         return
     }
+})
+
+statcord.on("autopost-start", () => {
+    console.log('Started autopost')
+});
+
+statcord.on("post", status => {
+    if (!status) console.log("Successful post") else console.error(status)
 })
 
 client.login(process.env.BOT_TOKEN)

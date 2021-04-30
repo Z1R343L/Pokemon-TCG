@@ -111,7 +111,8 @@ statcord.on("autopost-start", () => {
 });
 
 statcord.on("post", status => {
-    if (!status) console.log("Successful post") else console.error(status)
+    if (!status) console.log("Successful post")
+    else console.error(status)
 })
 
 client.login(process.env.BOT_TOKEN)

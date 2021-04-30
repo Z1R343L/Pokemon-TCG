@@ -30,7 +30,7 @@ client.on('message', msg => {
     const channel = msg.channel
      
     // Check if the bot is in a guild or in private message
-    if (msg.guild) {let channelType = 'guild'; id = msg.guild.id} else {channelType = 'user'; id = msg.author.id}
+    if (msg.guild) {channelType = 'guild'; id = msg.guild.id} else {channelType = 'user'; id = msg.author.id}
 
     const guildLanguage = language.get(id, channelType)
     const guildPrefix = prefix.get(id, channelType)
@@ -68,14 +68,14 @@ client.on('message', msg => {
 
     // Booster handling
     if (content == "buy" || content == "b") {
-        let handler = new user.userHandler(author.id, channel, guildLanguage, author.id, id, channelType)
+        handler = new user.userHandler(author.id, channel, guildLanguage, author.id, id, channelType)
         handler.buy(msg)
         return
     }
 
     // Money request handling
     if (content == "money" || content == "m") {
-        let handler = new user.userHandler(author.id, channel, guildLanguage)
+        handler = new user.userHandler(author.id, channel, guildLanguage)
         handler.money(guildLanguage)
         return
     }
@@ -83,10 +83,10 @@ client.on('message', msg => {
     // View request handling
     if (content.startsWith("view") || content.startsWith("v")) {
         if (msg.mentions.users.first() != undefined) {
-            let handler = new user.userHandler(msg.mentions.users.first().id, channel, guildLanguage, author.id, id, channelType)
+            handler = new user.userHandler(msg.mentions.users.first().id, channel, guildLanguage, author.id, id, channelType)
         }
         else {
-            let handler = new user.userHandler(author.id, channel, guildLanguage, author.id, id, channelType)
+            handler = new user.userHandler(author.id, channel, guildLanguage, author.id, id, channelType)
         }
         handler.view(msg)
         return
@@ -100,7 +100,7 @@ client.on('message', msg => {
 
     // Help
     if (content == "help" || content == "h") {
-        let handler = new help.helpHandler(msg.member, channel, guildLanguage)
+        handler = new help.helpHandler(msg.member, channel, guildLanguage)
         handler.view()
         return
     }

@@ -15,8 +15,8 @@ const statcord = new Statcord.Client({
 })
 
 if (!fs.existsSync('data/')) {fs.mkdirSync('data/')}
-if (!fs.existsSync('data/server.json')) {let rawData = '{"servers":[]}'; fs.writeFileSync('data/server.json', rawData)} else {let rawData = fs.readFileSync('data/server.json')} try {JSON.parse(rawData)} catch {let rawData = '{"servers":[]}'; fs.writeFileSync('data/server.json', rawData)}
-if (!fs.existsSync('data/user.json')) {let rawData = '{"users":[]}'; fs.writeFileSync('data/user.json', rawData)} else {let rawData = fs.readFileSync('data/user.json')}try {JSON.parse(rawData)} catch {let rawData = '{"users":[]}'; fs.writeFileSync('data/user.json', rawData)}
+if (!fs.existsSync('data/server.json')) {rawData = '{"servers":[]}'; fs.writeFileSync('data/server.json', rawData)} else {rawData = fs.readFileSync('data/server.json')} try {JSON.parse(rawData)} catch {rawData = '{"servers":[]}'; fs.writeFileSync('data/server.json', rawData)}
+if (!fs.existsSync('data/user.json')) {rawData = '{"users":[]}'; fs.writeFileSync('data/user.json', rawData)} else {rawData = fs.readFileSync('data/user.json')} try {JSON.parse(rawData)} catch {rawData = '{"users":[]}'; fs.writeFileSync('data/user.json', rawData)}
 
 client.on('ready', () => {
     console.log(`app.js: Logged in as ${client.user.username}!`)
@@ -37,10 +37,10 @@ client.on('message', msg => {
 
     // Check if message starts with prefix
     if (contentWithPrefix.startsWith("ty ")) {
-        let content = contentWithPrefix.substr(3).toLocaleLowerCase()
+        content = contentWithPrefix.substr(3).toLocaleLowerCase()
     }
     else if (contentWithPrefix.startsWith(`${guildPrefix}`)) {
-        let content = contentWithPrefix.substr(guildPrefix.length).toLocaleLowerCase()
+        content = contentWithPrefix.substr(guildPrefix.length).toLocaleLowerCase()
     }
     else {return}
 
